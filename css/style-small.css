@@ -1,0 +1,470 @@
+:root {
+    --primary-side: #1c1e1f;
+    --primary-colored: #4e08be;
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 264px;
+    height: 100%;
+    background-color: var(--primary-side);
+}
+
+/* LOGO HOME PAGE */
+.logo {
+    margin-bottom: 40px;
+    margin-left: 3px;
+    background-image: url("../assets/logo/raeden_logo_main_4x.png");
+    width: 256px;
+    height: 128px;
+    background-size: contain; 
+    transition: 0.25s ease-in-out; 
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 4px); }
+    100%   { transform: translate(0, -0px); }    
+  }
+
+.sidebar .logo:hover {
+    background-image: url("../assets/logo/raeden_logo_main_4x_hovered.png");
+}
+.logo-na img{
+    display: none;
+}
+
+/* HOME PAGE BUTTON STUFF */
+.buttons {
+    margin-bottom: 40px;
+}
+
+/* ------------- BUTTON: HOME ------------- */
+/* ------------- */
+.home-btn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    width: 100%; 
+    height: 40px;
+    cursor: pointer; 
+    transition: background-color 0.35s ease;
+    position: relative;
+}
+
+.home-btn:hover {
+    background-color: #fff;
+}
+
+.home-btn-ico {
+    margin-right: 8px;
+    margin-left: 15px;
+    background-image: url("../assets/icons_small/ico_home.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain; 
+    transition: 0.35s ease-in-out; 
+}
+
+.home-btn:hover .home-btn-ico {
+    background-image: url("../assets/icons_small/ico_home_hover.png");
+}
+
+.home-btn-text {
+    color: #fff;
+    margin-right: 20px;
+    font-family: VT323, sans-serif;
+    font-size: 24px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+    
+}
+.home-btn:hover .home-btn-text {
+    color: #1c1e1f;
+    letter-spacing: 3px;
+}
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- BUTTON: Projects ------------- */
+/* ------------- */
+.proj-btn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    width: 100%; 
+    height: 40px;
+    cursor: pointer; 
+    transition: background-color 0.35s ease;
+    position: relative;
+}
+
+.proj-btn:hover {
+    background-color: #fff;
+}
+
+.proj-btn-ico {
+    margin-right: 8px;
+    margin-left: 15px;
+    background-image: url("../assets/icons_small/ico_projects.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain; 
+    transition: 0.35s ease-in-out; 
+}
+
+.proj-btn:hover .proj-btn-ico {
+    background-image: url("../assets/icons_small/ico_projects_hover.png");
+}
+
+.proj-btn-text {
+    color: #fff;
+    margin-right: 20px;
+    font-family: VT323, sans-serif;
+    font-size: 24px;
+    letter-spacing: -1px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+    
+}
+.proj-btn:hover .proj-btn-text {
+    color: #1c1e1f;
+    letter-spacing: 1px;
+}
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- BUTTON: Portfolio ------------- */
+/* ------------- */
+.portfolio-btn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    width: 100%; 
+    height: 40px;
+    cursor: pointer; 
+    transition: background-color 0.35s ease;
+    position: relative;
+}
+
+.portfolio-btn:hover {
+    background-color: #fff;
+}
+
+.portfolio-btn-ico {
+    margin-right: 8px;
+    margin-left: 15px;
+    background-image: url("../assets/icons_small/ico_portfolio.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain; 
+    transition: 0.35s ease-in-out; 
+}
+
+.portfolio-btn:hover .portfolio-btn-ico {
+    background-image: url("../assets/icons_small/ico_portfolio_hover.png");
+}
+
+.portfolio-btn-text {
+    color: #fff;
+    margin-right: 20px;
+    font-family: VT323, sans-serif;
+    font-size: 24px;
+    letter-spacing: -1px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+    
+}
+.portfolio-btn:hover .portfolio-btn-text {
+    color: #1c1e1f;
+    letter-spacing: 1px;
+}
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- BUTTON: Raid Studio ------------- */
+/* ------------- */
+.raidstudio-btn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+    width: 100%; 
+    height: 40px;
+    cursor: pointer; 
+    transition: background-color 0.35s ease;
+    position: relative;
+}
+
+.raidstudio-btn:hover {
+    background-color: #fff;
+}
+
+.raidstudio-btn-ico {
+    margin-right: 8px;
+    margin-left: 15px;
+    background-image: url("../assets/icons_small/ico_rs.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain; 
+    transition: 0.35s ease-in-out; 
+}
+
+.raidstudio-btn:hover .raidstudio-btn-ico {
+    background-image: url("../assets/icons_small/ico_rs_hover.png");
+}
+
+.raidstudio-btn-text {
+    color: #fff;
+    margin-right: 20px;
+    font-family: VT323, sans-serif;
+    font-size: 24px;
+    letter-spacing: -1px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+    
+}
+.raidstudio-btn:hover .raidstudio-btn-text {
+    color: #1c1e1f;
+    letter-spacing: 1px;
+}
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- BUTTON: Contact ------------- */
+/* ------------- */
+.contactmain-btn {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: transparent;
+    width: 100%; 
+    height: 40px;
+    cursor: pointer; 
+    transition: background-color 0.35s ease;
+    position: relative;
+}
+
+.contactmain-btn:hover {
+    background-color: #fff;
+}
+
+.contactmain-btn-ico {
+    margin-right: 8px;
+    margin-left: 15px;
+    background-image: url("../assets/icons_small/ico_contact.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain; 
+    transition: 0.35s ease-in-out; 
+}
+
+.contactmain-btn:hover .contactmain-btn-ico {
+    background-image: url("../assets/icons_small/ico_contact_hover.png");
+}
+
+.contactmain-btn-text {
+    color: #fff;
+    margin-right: 20px;
+    font-family: VT323, sans-serif;
+    font-size: 24px;
+    letter-spacing: -1px;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+    
+}
+.contactmain-btn:hover .contactmain-btn-text {
+    color: #1c1e1f;
+    letter-spacing: 1px;
+}
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------------------------------------------------------ */
+
+.link-buttons {
+    margin-left: 14px;
+    display: flex;
+}
+
+/* ------------- LINK BTN: CONTACT ------------- */
+.contact-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_email.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_email_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: Discord ------------- */
+.discord-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_discord.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.discord-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_discord_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: Instagram ------------- */
+.insta-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_insta.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.insta-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_insta_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: Twitter ------------- */
+.twitter-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_twitter.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.twitter-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_twitter_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------------------------------------------------------ */
+
+.link-buttons-row2 {
+    margin-left: 14px;
+    display: flex;
+}
+
+/* ------------- LINK BTN: tiktok ------------- */
+.tiktok-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_tiktok.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.tiktok-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_tiktok_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: sketchfab ------------- */
+.sketchfab-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_sketchfab.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.sketchfab-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_sketchfab_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: youtube ------------- */
+.youtube-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    background-image: url("../assets/icons_small/button_yt.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.youtube-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_yt_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+/* ------------- LINK BTN: patreon ------------- */
+.patreon-btn {
+    display: flex;
+    align-items: center; 
+    margin-left: 18px;
+    margin-top: 18px;
+    margin-bottom: 82px;
+    background-image: url("../assets/icons_small/button_patreon.png"); 
+    height: 36px; 
+    width: 36px;
+    cursor: pointer; 
+    transition: background-image 0.25s ease, transform 0.25s ease; 
+}
+
+.patreon-btn:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/icons_small/button_patreon_hover.png"); 
+}
+
+/* ------------- END OF BUTTON ------------- */
+
+.rightsres {
+    font-family: VT323, sans-serif;
+    margin-left: 20px;
+    color: #fff;
+}
