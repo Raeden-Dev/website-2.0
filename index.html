@@ -8,14 +8,13 @@
     <!--Config-->
     <link rel="stylesheet" href="css/style-small.css">
 
-	<link rel="icon" href="assets/logo/website_favicon_main.png">
     <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Handjet:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="sidebar">
         <div class="sidebar-content">
-
+ 
             <!--Logo-->
             <div class="logo-container">
                 <img src="assets/logo/raeden_logo_main_4x.png" alt="Raeden MC Logo" class="logo">
@@ -27,7 +26,7 @@
                     <li><a href="#" class="active"><img src="Screenshot_4.jpg" alt="Home Icon"> Home</a></li>
                     <li><a href="portfolio.html"><img src="Screenshot_4.jpg" alt="Portfolio Icon"> Portfolio</a></li>
                     <li><a href="projects.html"><img src="Screenshot_4.jpg" alt="Projects Icon"> Projects</a></li>
-                    <li><a href="raid-studio.html"><img src="Screenshot_4.jpg" alt="Raid Studio Icon"> Raid Studio</a></li>
+                    <li><a href="raid_studio.html"><img src="Screenshot_4.jpg" alt="Raid Studio Icon"> Raid Studio</a></li>
                     <li><a href="contact.html"><img src="Screenshot_4.jpg" alt="Contact Icon"> Contact</a></li>
                 </ul>
             </nav>
@@ -164,7 +163,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate amet voluptatibus 
                 illum earum. Ipsum distinctio atque maiores obcaecati provident vitae quos ipsam alias, quae quam, officia qui est illo!
                 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate amet voluptatibus 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cupiditate amet voluptatibus  
                 illum earum. Ipsum distinctio atque maiores obcaecati provident vitae quos ipsam alias, quae quam, officia qui est illo!
             </h1>
         </div>
@@ -178,7 +177,17 @@
 
 
 
-    
-    <script src="scripts/main.js"></script>
+    <script>
+        let bg_main = document.getElementById('bg_main')
+        let buildings = document.getElementById('buildings')
+        let bg_front_a = document.getElementById('bg_front_a')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            buildings.style.top = -value * 0.3 + "px";
+            bg_front_a.style.top = -value * 0.6 + "px";
+        })
+    </script>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

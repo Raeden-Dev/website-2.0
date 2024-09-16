@@ -86,7 +86,7 @@ body {
     left: 0;
     width: 98%;
     height: 100%;
-    background-image: url('assets/logo/raeden_logo_main_4x_hovered.png');
+    background-image: url('../assets/logo/raeden_logo_main_4x_hovered.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
@@ -118,6 +118,11 @@ nav ul {
 nav ul li {
     text-align: left;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #292b2c; 
 }
 
 nav ul li a {
@@ -127,16 +132,29 @@ nav ul li a {
     justify-content: flex-start;
     text-decoration: none;
     color: #fff;
+    font-family: "Handjet", system-ui;
 }
 
 nav ul li a.active {
     font-weight: bold;
+    position: relative;
+}
+
+nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 3px;
+    background-color: #ffffff;
 }
 
 nav ul li a img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
 
