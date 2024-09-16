@@ -6,15 +6,30 @@
     
 }
 
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Geo', sans-serif;
+    overflow-x: hidden;
+}
+
+
 /*Scrollbar*/
 ::-webkit-scrollbar {
     width: 6px;
 }
 
+*{
+    scroll-behavior: smooth;
+}
+
+
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--primary-side);
 }
+
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -23,132 +38,218 @@
     transition: 0.5s ease-in-out;
 }
 
-body {
+
+/* Sidebar */
+
+ .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1c1e1f;
+    padding: 20px;
     display: flex;
-    margin: 0;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Logo */
+
+.logo {
+    max-width: 98%;
+    transition: opacity 0.3s ease-in-out;
+    height: auto;
+}
+
+.logo-container {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.logo-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    background-image: url('assets/logo/raeden_logo_main_4x_hovered.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo-container:hover .logo {
+    opacity: 0;
+}
+
+.logo-container:hover::after {
+    opacity: 1;
+}
+
+
+/* Pages */
+
+nav {
+    width: 100%;
+    margin-top: -110px;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style-type: none;
     padding: 0;
 }
 
-.sidebar {
-    width: 15%;
-    background-color: var(--primary-side);
-    height: 100%;
-    position: fixed;
-}
-
-.logo {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 9px;
-    background-image: url("../assets/logo/raeden_logo_main_4x.png");
-    width: 185px;
-    height: 100px;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    transition: background-image 0.25s ease-in-out; 
-}
-
-.sidebar .logo:hover {
-    background-image: url("../assets/logo/raeden_logo_main_4x_hovered.png");
-}
-.logo-na img{
-    display: none;
-}
-
-.floating {  
-    animation-name: floating;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-  }
-  
-  @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 4px); }
-    100%   { transform: translate(0, -0px); }    
-  }
-
-.tabs {
-    display: flex;
-    flex-direction: column;
-    margin-left: 14px;
-}
-
-.objects1, .objects2, .objects3, .objects4, .objects5 {
+nav ul li {
+    text-align: left;
     margin-bottom: 10px;
+}
+
+nav ul li a {
     display: flex;
     align-items: center;
-}
-
-.objects1 a, .objects2 a, .objects3 a, .objects4 a, .objects5 a{
+    font-size: 1.5em;
+    justify-content: flex-start;
     text-decoration: none;
     color: #fff;
-    font-family: "Handjet", sans-serif;
-    font-size: 25px;
-    margin-left: 4px;
 }
 
-.objects1 a{
-    margin-top: 10px;
+nav ul li a.active {
+    font-weight: bold;
 }
 
-.objects1:hover{
-    background-color: aliceblue;
+nav ul li a img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.buttons {
-    margin-top: 70px;
-    margin-left: 8.5%;
+
+/* Socials */
+
+.social-icons {
+    position: relative;
+    top: -70px;
 }
 
-@media screen and (max-width: 280px) {
-    
+.social-icons img {
+    width: 40px;
+    height: 40px;
 }
 
-.buttons-row1 a {
-    margin-right: 2px;
+.social-icons .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-.buttons-row1 {
-    margin-bottom: 2px;
+.social-icons a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4.5px;
 }
 
-.buttons-row2 a {
-    margin-right: 2px;
-}
 
-.rightsres {
-    font-family: "Geo", sans-serif;
+/* Copyright */
+
+.copyright {
+    font-size: 0.8em;
+    text-align: center;
     color: #fff;
-    font-size: 14px;
-    margin-left: 5px;
-    margin-top: 35%;
+    flex-shrink: 0;
+    margin-top: -30px;
+    padding-bottom: 20px;
 }
 
 
+/* Main Contents */
 
-
- /*Content*/
-
- .content {
-    margin-left: 15%;
+.main-content {
+    width: 100%;
     position: relative;
-    overflow: hidden;
- }
-
- .background-container {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+    margin-left: 240px;
+    background-color: #1c1e1f;
 }
 
-.background-image {
+.main-content h1 {
+    color: #fff;
+}
+
+
+/* Background Art */
+
+section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; 
+    z-index: 11;
+}
+
+section img#bg_main {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 9;
+}
+
+section img#buildings {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    pointer-events: none;
+    z-index: 9;
+    margin-top: 41vh;
+}
+
+section img#bg_front_a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 9;
+    margin-top: 23.5vh;
 }
 
 
+
+.sec {
+      position: relative;
+      padding: 100px;
+      z-index: 1001; 
+      background-color: #090C1A;
+}
