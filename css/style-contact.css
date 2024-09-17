@@ -148,7 +148,21 @@ nav ul li a.active::before {
     transform: translateY(-50%);
     height: 60%;
     width: 3px;
-    background-color: white;
+    background-color: #ffffff;
+    height: 0;
+    opacity: 0;
+    animation: growLine 0.3s ease-out forwards;
+}
+
+@keyframes growLine {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 60%;
+      opacity: 1;
+    }
 }
 
 nav ul li a img {
@@ -194,7 +208,7 @@ nav ul li a img {
     color: #fff;
     flex-shrink: 0;
     margin-top: -30px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
  
