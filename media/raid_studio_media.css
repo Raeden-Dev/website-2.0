@@ -1,3 +1,4 @@
+
 @media screen and (min-height: 800px) {
     .sidebar {
         padding-top: 30px;
@@ -12,30 +13,11 @@
     }
 }
 
-@media screen and (min-height: 1000px) {
-    .sidebar {
-        padding-top: 40px;
-    }
-    nav {
-        width: 100%;
-        margin-top: -230px;
-    }
-    nav ul li a {
-        font-size: 1.7em;
-    }
-    .social-icons {
-        position: relative;
-        top: -110px;
-    }
-}
 
 @media screen and (min-height: 1000px) {
-    .sidebar {
-        padding-top: 40px;
-    }
     nav {
         width: 100%;
-        margin-top: -230px;
+        margin-top: -530px;
     }
     nav ul li a {
         font-size: 1.7em;
@@ -51,17 +33,29 @@
 
 @media screen and (min-height: 1200px) {
     .sidebar {
-        padding-top: 50px;
+        padding-top: 35px;
     }
     nav {
         width: 100%;
-        margin-top: -270px;
-    }
-    .social-icons {
-        position: relative;
-        top: -130px;
+        margin-top: -550px;
     }
     .copyright {
         padding-bottom: 45px;
     }
+}
+
+@media screen and (min-height: 1300px) {
+    nav {
+        width: 100%;
+        margin-top: -650px;
+    }
+
+}
+
+@media screen and (min-height: 1400px) {
+    nav {
+        width: 100%;
+        margin-top: -750px;
+    }
+
 }
