@@ -720,7 +720,7 @@ section img#bg_front_a {
     display: block;
   }
   input {
-    background-color: var(--primary-side);
+    background-color: #1a1f35;
     display: block;
     font-weight: inherit;
     font-size: 15px; 
@@ -735,7 +735,7 @@ section img#bg_front_a {
     font-family: 'Michroma', sans-serif;
   }
   textarea {
-    background-color: var(--primary-side);
+    background-color: #1a1f35;
     font-weight: inherit;
     font-size: 15px;
     font-family: inherit;
@@ -758,7 +758,7 @@ section img#bg_front_a {
     margin-bottom: 20px;
   }
   button {
-    background-color: var(--primary-side);
+    background-color: #055ACD;
     color: #fff;
     font-size: 14px;
     padding: 10px 30px;
@@ -770,5 +770,5 @@ section img#bg_front_a {
     font-family: 'Michroma', sans-serif;
   }
   button:hover {
-    background-color: #2a2d2e;
+    background-color: #1a1f35;
   }
