@@ -52,3 +52,17 @@
       });
   });
 
+
+    // Add the loading screen functionality with a longer duration
+    window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+    
+        // Wait for 2 seconds before starting the fade out
+        setTimeout(function() {
+            loadingScreen.style.opacity = '0';
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }, 1300);
+    });
+;
