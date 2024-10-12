@@ -340,6 +340,10 @@ section img#bg_front_a {
     display: flex;
 }
 
+.filter-btn:hover {
+    background-color: initial;
+}
+
 .filter-btn {
     position: relative;
     background: none;
@@ -491,7 +495,7 @@ section img#bg_front_a {
 
 .about-section {
   padding: 10px 0;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .about-content {
@@ -564,7 +568,7 @@ section img#bg_front_a {
 
 .experience-section {
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .experience-section h2 {
@@ -696,10 +700,10 @@ section img#bg_front_a {
 .contact {
     background-color: var(--color-primary);
     padding-bottom: 80px;
-  }
-  .container {
+}
+.container {
     margin: 0 100px;
-  }
+}
   .contact h1 {
     text-align: center;
     color: #ffffff;
