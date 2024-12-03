@@ -65,3 +65,42 @@
         }, 1300);
     });
 ;
+
+// Navigation
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetSection = document.getElementById(button.dataset.section);
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Update active state
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+    
+    // Update active button on scroll
+    window.addEventListener('scroll', () => {
+        const sections = ['background-art', 'portfolio', 'about', 'experience-section', 'contact'];
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const element = document.getElementById(section);
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight/2 && rect.bottom >= window.innerHeight/2) {
+                currentSection = section;
+            }
+        });
+        
+        navButtons.forEach(button => {
+            if (button.dataset.section === currentSection) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+    });
+});
