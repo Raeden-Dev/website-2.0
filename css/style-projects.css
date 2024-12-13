@@ -200,12 +200,31 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-family: "Handjet", system-ui;
+    position: relative;
 }
 
 nav ul li a.active {
     font-weight: bold;
     position: relative;
 }
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background-color: white;
+    transition: height 0.3s ease;
+    left: -20px;
+}
+
+nav ul li a:hover::after {
+    height: 25%;
+  }
+
 
 nav ul li a.active::before {
     content: '';
@@ -317,7 +336,6 @@ nav ul li a img {
 
 .project-section {
     display: flex;
-    align-items: center;
     gap: 2rem;
     padding: 0 100px;
     margin: 2rem 0;
@@ -330,12 +348,12 @@ nav ul li a img {
 .project-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-content {
-    flex: 0 0 60%;
+    flex: 0 0 58%;
+    margin-top: -35px;
 }
 
 .project-title {

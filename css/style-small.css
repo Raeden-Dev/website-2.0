@@ -32,7 +32,6 @@ body {
 .nav-btn {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     border: 2px solid #ffffff;
     background: rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -200,12 +199,31 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-family: "Handjet", system-ui;
+    position: relative;
 }
 
 nav ul li a.active {
     font-weight: bold;
     position: relative;
 }
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background-color: white;
+    transition: height 0.3s ease;
+    left: -20px;
+}
+
+nav ul li a:hover::after {
+    height: 25%;
+}
+
 
 nav ul li a.active::before {
     content: '';
@@ -758,7 +776,7 @@ section img#bg_front_a {
     text-align: left;
     padding-top: 15px;
     font-size: 55px;
-    padding-bottom: 20px;
+    
     font-family: "Handjet", system-ui;
 }
 
