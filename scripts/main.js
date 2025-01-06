@@ -21,3 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Contact - Discord Button
+function copyDiscord() {
+    const discordTag = "raeden"; // Replace with your Discord tag
+    navigator.clipboard.writeText(discordTag).then(() => {
+        const button = document.querySelector('.discord-button');
+        const tooltip = button.querySelector('.discord-tooltip');
+        tooltip.textContent = 'Copied!';
+        
+        setTimeout(() => {
+            tooltip.textContent = 'Click to copy Discord';
+        }, 2000);
+    });
+}

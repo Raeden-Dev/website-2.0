@@ -377,13 +377,14 @@ section img#bg_front_a {
     position: relative;
     padding: 100px;
     padding-bottom: 40px;
+    padding-top: 85px;
     z-index: 1001; 
     background-color: #090C1A;
 }
 
 .portfolio-header {
     display: flex;
-    align-items: center;
+    align-items: center; 
     margin-bottom: 20px;
 }
 

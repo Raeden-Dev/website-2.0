@@ -315,10 +315,11 @@ nav ul li a img {
     box-sizing: border-box;
     margin-left: 240px;
     background-color: #090C1A;
+    padding-bottom: 30px;
 }
 
 .main-content h1 {
-    color: #fff;
+    color: #fff; 
 }
 
 
@@ -353,7 +354,7 @@ nav ul li a img {
 
 .project-content {
     flex: 0 0 58%;
-    margin-top: -35px;
+    margin-top: -40px;
 }
 
 .project-title {
