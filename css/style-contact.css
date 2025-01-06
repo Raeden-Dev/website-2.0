@@ -397,7 +397,7 @@ textarea {
 button {
     background-color: #1a1f35;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     padding: 10px 30px;
     transition: 0.4s;
     border: none;
@@ -415,7 +415,7 @@ button:hover {
 /* Discord */
 
 .discord-button {
-    position: fixed;
+    position: fixed; 
     bottom: 20px;
     right: 20px;
     background: #5865F2;
@@ -455,4 +455,8 @@ button:hover {
 
 .discord-button:hover .discord-tooltip {
     opacity: 1;
+}
+
+.discord-text {
+    color: #fff;
 }

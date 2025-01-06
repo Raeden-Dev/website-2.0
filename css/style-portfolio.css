@@ -274,7 +274,7 @@ nav ul li a img {
 }
 
 .main-content h1 {
-    color: #fff;
+    color: #fff; 
 }
 
 /* Preview */
@@ -810,4 +810,76 @@ aspect-ratio: 2 / 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+  .category-buttons {
+      text-align: center;
+      margin: 20px 0;
+      width: 100%;
+  }
+
+  .category-link {
+      display: none;
+      padding: 10px 0;
+      background-color: var(--default-bg-color);
+      color: white;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      width: 100%;
+      font-weight: bold;
+      font-size: 18px;
+  }
+  
+
+  .category-link:hover {
+      letter-spacing: 0.2px;
+  }
+
+
+  /* Discord */
+
+.discord-button {
+  position: fixed; 
+  bottom: 20px;
+  right: 20px;
+  background: #5865F2;
+  padding: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border-radius: 3px;
+}
+
+.discord-button:hover {
+  transform: scale(1.02);
+}
+
+.discord-button img {
+  width: 24px;
+  height: 24px;
+}
+
+
+.discord-tooltip {
+  position: absolute;
+  background: #1a1a1a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.discord-button:hover .discord-tooltip {
+  opacity: 1;
+}
+
+.discord-text {
+  color: #fff;
 }

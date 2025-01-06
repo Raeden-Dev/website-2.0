@@ -681,7 +681,7 @@ section img#bg_front_a {
     transform: translateY(-50%);
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 15px;
     border: medium solid #055ACD;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #055ACD;
@@ -695,7 +695,7 @@ section img#bg_front_a {
     transform: translateY(-50%);
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 15px;
     border: medium solid #055ACD;
     border-width: 10px 10px 10px 0;
     border-color: transparent #055ACD transparent transparent;
@@ -757,6 +757,13 @@ section img#bg_front_a {
     text-align: right;
 }
 
+.timeline-item.right .text-content p {
+    text-align: right;
+}
+
+.timeline-item.left .text-content p{
+    width: 95.5%;
+}
 
 /* Contact */
 
@@ -847,4 +854,53 @@ button {
 
 button:hover {
     background-color: #055ACD;
+}
+
+/* Discord */
+
+.discord-button {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    background: #5865F2;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 3px;
+}
+
+.discord-button:hover {
+    transform: scale(1.02);
+}
+
+.discord-button img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.discord-tooltip {
+    position: absolute;
+    background: #1a1a1a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.discord-button:hover .discord-tooltip {
+    opacity: 1;
+}
+
+.discord-text {
+    color: #fff;
 }
