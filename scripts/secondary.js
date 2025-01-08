@@ -104,3 +104,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Hamburger Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const sidebar = document.querySelector('.sidebar');
+    let isOpen = false;
+
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isOpen = !isOpen;
+        
+        if(isOpen) {
+            sidebar.style.transform = 'translateX(0)';
+            hamburger.classList.add('active');
+        } else {
+            sidebar.style.transform = 'translateX(-100%)';
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if(isOpen && !sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.style.transform = 'translateX(-100%)';
+            hamburger.classList.remove('active');
+            isOpen = false;
+        }
+    });
+});

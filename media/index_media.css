@@ -78,4 +78,59 @@
     .skills-section {
         margin-top: 30px;
     }
+
+
+    .logo {
+        max-width: 96%;
+        transition: opacity 0.3s ease-in-out;
+        height: auto;
+        margin-top: 30px;
+    }
+    .logo-container::after {
+        width: 96%;
+        margin-top: 30px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 196px;
+        z-index: 999;
+        background-color: #1a1a1a;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Hamburger animation classes */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .contact h1 {
+        font-size: 45px;
+    }
+
 }

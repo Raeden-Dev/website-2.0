@@ -883,3 +883,23 @@ aspect-ratio: 2 / 1;
 .discord-text {
   color: #fff;
 }
+
+
+/*Hamburger Menu*/
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}

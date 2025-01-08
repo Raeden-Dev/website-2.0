@@ -800,7 +800,7 @@ input {
     background-color: #1a1f35;
     display: block;
     font-weight: inherit;
-    font-size: 15px; 
+    font-size: 20px; 
     font-family: inherit;
     padding: 0.8rem 1.1rem;
     outline: none;
@@ -815,7 +815,7 @@ input {
 textarea {
     background-color: #1a1f35;
     font-weight: inherit;
-    font-size: 15px;
+    font-size: 20px;
     font-family: inherit;
     padding: 0.8rem 1.1rem;
     outline: none;
@@ -842,7 +842,7 @@ textarea {
 button {
     background-color: #1a1f35;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     padding: 10px 30px;
     transition: 0.4s;
     border: none;
@@ -903,4 +903,24 @@ button:hover {
 
 .discord-text {
     color: #fff;
+}
+
+
+/*Hamburger Menu*/
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
 }
