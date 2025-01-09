@@ -133,3 +133,288 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Raid Studio
+function openPopup(projectId) {
+    const popup = document.getElementById('projectPopup');
+    const title = document.getElementById('popupTitle');
+    const description = document.getElementById('popupDescription');
+    const gallery = document.getElementById('popupGallery');
+    
+    // Project data (you can store this in a separate file)
+    const projectData = {
+        project1: {
+            title: "Project 1",
+            description: "Detailed description of project 1",
+            images: [
+                "assets/gallery/swords_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project2: {
+            title: "Project 2", 
+            description: "Detailed description of project 2",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project3: {
+            title: "Project 3",
+            description: "Detailed description of project 3",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project4: {
+            title: "Project 4",
+            description: "Detailed description of project 4",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project5: {
+            title: "Project 5",
+            description: "Detailed description of project 5",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project6: {
+            title: "Project 6",
+            description: "Detailed description of project 6",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project7: {
+            title: "Project 7",
+            description: "Detailed description of project 7",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project8: {
+            title: "Project 8",
+            description: "Detailed description of project 8",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        project9: {
+            title: "Project 9",
+            description: "Detailed description of project 9",
+            images: [
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/mob_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png",
+                "assets/gallery/swords_full.png"
+            ]
+        },
+        
+        // Continue for other projects using the same assets in different combinations
+    };
+
+    // Update popup content
+    const project = projectData[projectId];
+    title.textContent = project.title;
+    description.textContent = project.description;
+    
+    // Clear and populate gallery
+    gallery.innerHTML = '';
+    project.images.forEach(imgSrc => {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = project.title;
+        gallery.appendChild(img);
+    });
+
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('projectPopup').style.display = 'none';
+}
+
+// Add this event listener
+window.addEventListener('click', function(event) {
+    const popup = document.getElementById('projectPopup');
+    if (event.target === popup) {
+        closePopup();
+    }
+});

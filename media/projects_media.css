@@ -113,11 +113,11 @@
     .page-title {
         font-size: 45px;
         margin: 1.7rem 0;
-        margin-left: 70px;
+        text-align: center;
     }
 
     .project-section {
-        padding: 0 70px;
+        padding: 0 40px;
     }
 
     .project-section {

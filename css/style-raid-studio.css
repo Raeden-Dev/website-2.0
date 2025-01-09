@@ -12,6 +12,7 @@ body {
     padding: 0;
     font-family: 'Geo', sans-serif;
     overflow-x: hidden;
+    background-color: #090C1A;
 }
 
 
@@ -315,7 +316,7 @@ nav ul li a img {
     box-sizing: border-box;
     margin-left: 240px;
     background-color: #090C1A;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .main-content h1 {
@@ -324,7 +325,7 @@ nav ul li a img {
 
 
 
-/* Project */
+/* Raid */
 
 .page-title {
     font-family: 'Handjet', sans-serif;
@@ -335,42 +336,113 @@ nav ul li a img {
     font-size: 55px;
 }
 
-.project-section {
+.raid-studio {
     display: flex;
     gap: 2rem;
-    padding: 0 100px;
+    padding: 0 95px;
     margin: 2rem 0;
 }
+  .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      gap: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+  }
 
-.project-image {
-    flex: 0 0 40%;
-}
+  .project-card {
+      width: 100%;
+      min-width: 300px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
 
-.project-image img {
-    width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  .project-card:hover {
+      transform: translateY(-5px);
+  }
 
-.project-content {
-    flex: 0 0 58%;
-    margin-top: -40px;
-}
-
-.project-title {
-    font-family: 'Handjet', sans-serif;
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
+  .project-card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+  }
+  
 
 .project-description {
-    font-size: 21px;
-    line-height: 1.6;
-    color: #ffff;
-    text-align: justify;
-    font-family: 'Geo', sans-serif;
+    padding: 0.6rem;
+    margin: 0;
 }
+
+.project-description h3,
+.project-description p {
+    margin: 0;
+    padding: 0;
+}
+
+.project-description h3 {
+    font-size: 25px;
+}
+
+.project-description p {
+    font-size: 20px;
+}
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    background: #fff;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.popup-content h2 {
+    font-size: 35px;
+}
+
+.popup-content p {
+    font-size: 25px;
+}
+
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popup-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.popup-gallery img {
+    width: 100%;
+}
+
+
+
+
 
 /* Discord */
 
