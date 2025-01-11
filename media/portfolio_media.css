@@ -110,4 +110,8 @@
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
+    .discord-button {
+        padding: 0 10px;
+    }
+
 }

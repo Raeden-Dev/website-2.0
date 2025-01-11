@@ -138,6 +138,9 @@
     .project-content {
         margin-top: 0px;
     }
+    .discord-button {
+        padding: 0 10px;
+    }
 
 }
 

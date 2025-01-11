@@ -359,33 +359,6 @@ function openPopup(projectId) {
                 "assets/gallery/swords_full.png"
             ]
         },
-        project9: {
-            title: "Project 9",
-            description: "Detailed description of project 9",
-            images: [
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png"
-            ]
-        },
         
         // Continue for other projects using the same assets in different combinations
     };
@@ -418,3 +391,29 @@ window.addEventListener('click', function(event) {
         closePopup();
     }
 });
+
+
+// Discord
+function copyDiscord() {
+    const discordId = "raeden";
+    
+    // Create temporary input for mobile
+    const tempInput = document.createElement("input");
+    tempInput.value = discordId;
+    document.body.appendChild(tempInput);
+    
+    // Select and copy
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand("copy");
+    
+    // Clean up
+    document.body.removeChild(tempInput);
+    
+    // Show feedback
+    const tooltip = document.querySelector('.discord-tooltip');
+    tooltip.textContent = "Copied!";
+    setTimeout(() => {
+        tooltip.textContent = "Click to copy Discord";
+    }, 2000);
+}

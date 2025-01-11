@@ -59,14 +59,20 @@
 
 }
 
+@media screen and (min-width: 1800px) {
+    .project-card img {
+        height: 320px;
+    }
+  }
+
 @media screen and (min-width: 2400px) {
     .project-card img {
-        height: 300px;
+        height: 460px;
     }
   }
   @media screen and (min-width: 3700px) {
     .project-card img {
-        height: 480px;
+        height: 730px;
     }
   }
 
@@ -159,10 +165,7 @@
     .project-description h3 {
         font-size: 1.2rem;
     }
-
-    .project-description p {
-        font-size: 0.9rem;
-    }
+    
     .close-btn {
         position: fixed;
         top: 60px;
@@ -176,5 +179,9 @@
         justify-content: center;
         z-index: 1001;
     }
+    .discord-button {
+        padding: 0 5px;
+    }
+
 
 }

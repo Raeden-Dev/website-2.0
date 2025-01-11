@@ -132,5 +132,7 @@
     .contact h1 {
         font-size: 45px;
     }
-
+    .discord-button {
+        padding: 0 10px;
+    }
 }
