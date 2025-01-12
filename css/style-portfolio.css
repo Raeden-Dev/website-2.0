@@ -814,7 +814,7 @@ aspect-ratio: 2 / 1;
 
 .portfolio-item.sprites:nth-child(3n-1) {
   grid-column: span 2;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 2 / 1; 
 }
 
 .portfolio-item.models:nth-child(3n-3) {
@@ -823,6 +823,11 @@ aspect-ratio: 2 / 1;
 }
 
 .portfolio-item.animations:nth-child(3n-2) {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+.portfolio-item.github:nth-child(3n-1) {
   grid-column: span 2;
   aspect-ratio: 2 / 1;
 }

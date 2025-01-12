@@ -137,9 +137,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // Raid Studio
 function openPopup(projectId) {
     const popup = document.getElementById('projectPopup');
+    const discordButton = document.querySelector('.discord-button');
     const title = document.getElementById('popupTitle');
     const description = document.getElementById('popupDescription');
     const gallery = document.getElementById('popupGallery');
+    
+    // Check if it's mobile device
+    if (window.innerWidth <= 768) {
+        discordButton.style.display = 'none';
+    }
     
     // Project data (you can store this in a separate file)
     const projectData = {
@@ -273,9 +279,16 @@ function openPopup(projectId) {
 }
 
 function closePopup() {
-    document.getElementById('projectPopup').style.display = 'none';
+    const popup = document.getElementById('projectPopup');
+    const discordButton = document.querySelector('.discord-button');
+    
+    // Check if it's mobile device
+    if (window.innerWidth <= 768) {
+        discordButton.style.display = 'block';
+    }
+    
+    popup.style.display = 'none';
 }
-
 // Add this event listener
 window.addEventListener('click', function(event) {
     const popup = document.getElementById('projectPopup');
