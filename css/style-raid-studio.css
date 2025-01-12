@@ -566,7 +566,6 @@ select,
 /* Intro */
   .studio-intro {
       display: flex;
-      align-items: center;
       gap: 40px;
       padding: 0 100px;
       width: 100%;
