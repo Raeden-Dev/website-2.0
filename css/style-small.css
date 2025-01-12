@@ -415,6 +415,31 @@ section img#bg_front_a {
     font-family: "Handjet", system-ui;
 }
 
+
+.category-buttons {
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.category-link {
+    display: none;
+    padding: 10px 0;
+    background-color: var(--default-bg-color);
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.category-link:hover {
+    letter-spacing: 0.2px;
+}
+
+
 .filter-buttons {
     text-align: center;
     display: flex;
@@ -727,7 +752,6 @@ section img#bg_front_a {
     padding: 20px 25px;
     background-color: #1a1f35;
     position: relative;
-    border-radius: 6px;
 }
 
 .content h3 {
@@ -890,6 +914,7 @@ button:hover {
     transition: all 0.3s ease;
     z-index: 1000;
     margin: 0;
+    border: #000 4px solid;
 }
 
 .discord-button:hover {
@@ -907,7 +932,6 @@ button:hover {
     background: #1a1a1a;
     color: white;
     padding: 8px 12px;
-    border-radius: 6px;
     font-size: 14px;
     right: 100%;
     top: 50%;
@@ -957,4 +981,39 @@ button:hover {
     padding: 10px 0;
     color: #666;
     font-size: 1rem;
+}
+
+/* Cursor */
+
+* {
+    cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+}
+
+/* Interactive elements cursor */
+a, 
+button, 
+.project-card, 
+.discord-button, 
+.hamburger-menu, 
+.close-btn,
+.social-icons a,
+.social-icons img,
+.social-icons .row a,
+nav ul li a,
+.popup-content img,
+input[type="submit"],
+select,
+.logo:hover,
+.bar,
+.filter-button,
+.filter-buttons button,
+.page-navigation button,
+.nav-btn,
+.nav-btn img,
+.page-nav,
+.page-nav button,
+.popup-content::-webkit-scrollbar-thumb,
+.popup-content::-webkit-scrollbar-track
+{
+    cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
 }

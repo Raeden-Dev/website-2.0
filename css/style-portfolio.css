@@ -16,48 +16,6 @@ body {
 }
 
 
-/*Navigation*/
-
-
-.page-navigation {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000;
-}
-
-.nav-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 8px;
-}
-
-.nav-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: scale(1.05);
-}
-
-.nav-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.nav-btn.active {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: #000000;
-}
-
-
 /*Scrollbar*/
 
 ::-webkit-scrollbar {
@@ -333,7 +291,7 @@ nav ul li a img {
     box-sizing: border-box;
     background-color: #090C1A;
     margin-left: 240px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .main-content h1 {
@@ -910,6 +868,7 @@ aspect-ratio: 2 / 1;
     transition: all 0.3s ease;
     z-index: 1000;
     margin: 0;
+    border: #000 4px solid;
 }
 
 .discord-button:hover {
@@ -919,7 +878,7 @@ aspect-ratio: 2 / 1;
 .discord-button img {
   width: 24px;
   height: 24px;
-}
+} 
 
 
 .discord-tooltip {
@@ -927,7 +886,6 @@ aspect-ratio: 2 / 1;
   background: #1a1a1a;
   color: white;
   padding: 8px 12px;
-  border-radius: 6px;
   font-size: 14px;
   right: 100%;
   top: 50%;
@@ -966,4 +924,41 @@ aspect-ratio: 2 / 1;
   background-color: #fff;
   margin: 5px 0;
   transition: 0.4s;
+}
+
+
+/* Cursor */
+
+* {
+  cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+}
+
+/* Interactive elements cursor */
+a, 
+button, 
+.project-card, 
+.discord-button, 
+.hamburger-menu, 
+.close-btn,
+.social-icons a,
+.social-icons img,
+.social-icons .row a,
+nav ul li a,
+.popup-content img,
+input[type="submit"],
+select,
+.logo:hover,
+.bar,
+.filter-button,
+.filter-buttons button,
+.page-navigation button,
+.nav-btn,
+.nav-btn img,
+.page-nav,
+.page-nav button,
+.carousel-thumbnails img,
+.thumbnail-image,
+.portfolio-item img
+{
+  cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
 }

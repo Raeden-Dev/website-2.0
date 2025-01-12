@@ -16,48 +16,6 @@ body {
 }
 
 
-/*Navigation*/
-
-
-.page-navigation {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    background: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 8px;
-}
-
-.nav-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: scale(1.05);
-}
-
-.nav-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.nav-btn.active {
-    background: rgba(255, 255, 255, 0.8);
-    border-color: #000000;
-}
-
-
 /*Scrollbar*/
 
 ::-webkit-scrollbar {
@@ -403,6 +361,7 @@ nav ul li a img {
     transition: all 0.3s ease;
     z-index: 1000;
     margin: 0;
+    border: #000 4px solid;
 }
 
 .discord-button:hover {
@@ -420,7 +379,6 @@ nav ul li a img {
     background: #1a1a1a;
     color: white;
     padding: 8px 12px;
-    border-radius: 6px;
     font-size: 14px;
     right: 100%;
     top: 50%;
@@ -459,4 +417,37 @@ nav ul li a img {
     background-color: #fff;
     margin: 5px 0;
     transition: 0.4s;
+}
+
+/* Cursor */
+
+* {
+    cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+}
+
+/* Interactive elements cursor */
+a, 
+button, 
+.project-card, 
+.discord-button, 
+.hamburger-menu, 
+.close-btn,
+.social-icons a,
+.social-icons img,
+.social-icons .row a,
+nav ul li a,
+.popup-content img,
+input[type="submit"],
+select,
+.logo:hover,
+.bar,
+.filter-button,
+.filter-buttons button,
+.page-navigation button,
+.nav-btn,
+.nav-btn img,
+.page-nav,
+.page-nav button
+{
+    cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
 }
