@@ -588,18 +588,12 @@ select,
         color: #fff;
     }
 
-  .studio-description h2 {
-      margin-bottom: 20px;
-      font-family: 'Handjet', sans-serif;
-      font-size: 35px;
-      text-align: justify;
-  }
-
   .studio-description p {
-    font-size: 18px;
+    font-size: 20px;
       margin-bottom: 15px;
       line-height: 1.6;
       font-family: 'Geo', sans-serif;
+      text-align: justify;
   }
 
   /* Responsive design for smaller screens */
