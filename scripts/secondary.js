@@ -322,3 +322,32 @@ function copyDiscord() {
         tooltip.textContent = "Click to copy Discord";
     }, 2000);
 }
+
+
+// Mobile Slider functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function updateSlider() {
+        const width = sliderWrapper.clientWidth;
+        sliderWrapper.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const images = sliderWrapper.querySelectorAll('img');
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const images = sliderWrapper.querySelectorAll('img');
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider();
+    });
+
+    // Update slider on window resize
+    window.addEventListener('resize', updateSlider);
+});
