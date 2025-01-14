@@ -138,8 +138,230 @@
 
 
 
-    .background-art {
+    #background-art {
         display: none;
+    }
+
+    /* Filter section mobile version */
+
+    .portfolio {
+        padding: 10px 20px;
+    }
+
+    .portfolio-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-title {
+        margin: 0;
+        margin-top: 5rem;
+        font-size: 45px;
+        text-align: center;
+        padding: 0;
+        line-height: 0;
+    }
+
+    .filter-buttons {
+            gap: 0px;
+            padding: 0 0px;
+            width: 100%;
+            align-items: center;
+            margin-right: 0%;
+            margin-top: 30px;
+    }
+
+    .filter-btn {
+            width: 100%;
+            padding: 0px 0px;
+            font-size: 19px;
+            text-align: center;
+            white-space: nowrap;
+            line-height: none;
+    }
+    
+    .category-buttons {
+        display: flex;
+        gap: 10px;
+        padding: 0 0px;
+    }
+
+    .category-link {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .portfolio-item {
+        aspect-ratio: 16/9;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        padding: 0;
+        margin: 0;
+    }
+
+    .portfolio-item:nth-child(1) {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+      }
+
+
+      
+      .portfolio-item:nth-child(5) {
+      grid-column: span 1;
+      aspect-ratio: 16 / 9;
+      }
+      
+      .portfolio-item:nth-child(9) {
+      grid-column: span 1;
+      aspect-ratio: 16 / 9;
+      }
+      
+      
+      .portfolio-item.development:nth-child(3n-1) {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+      }
+
+      .portfolio-item.development {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .portfolio-item.development:nth-child(3n-2) {
+        grid-column: span 1;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .portfolio-item.development:nth-child(4) {
+        grid-column: span 1;
+    }
+    
+    .portfolio-item.development:nth-child(5) {
+        grid-column: span 1;
+    }
+    
+    .portfolio-item.development:nth-child(6) {
+        grid-column: span 1;
+    }
+
+      .image-viewer {
+        width: 100%;
+        flex-wrap: nowrap;
+        object-fit: contain;
+      }
+
+      /* Background  art */
+      .page-navigation {
+        display: none;
+    }
+
+      .mobile-background {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        pointer-events: none;
+        z-index: 9;
+    }
+    
+    /* About-Skills */
+    .about-content {
+        display: block;
+        padding: 0 20px;
+      }
+      
+    .skills-section {
+        margin-top: 70px;
+    }
+
+    /* Experience */
+
+    .timeline {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 8px;
+    }
+
+    .text-content {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+        text-align: justify;
+    }
+    .text-content h3 {
+        font-size: 24px;
+    }
+
+    .timeline-item.right .content {
+        flex-direction: column-reverse;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .timeline-item.right .text-content {
+        text-align: justify;
+    }
+    
+    .timeline-item.right .text-content p {
+        text-align: justify;
+    }
+    .timeline-item.right .client-image {
+        margin-left: 0px;
+    }
+
+    .timeline-item .client-image {
+        margin-right: 0px;
+    }
+
+    .experience-section {
+        position: relative;
+        padding-bottom: 20px;
+        padding-top: 15px;
+    }
+
+    .content p {
+        font-size: 15px;
+    }
+    
+    .left::before {
+        display: none;
+    }
+    
+    .right::before {
+        display: none;
+    }
+    
+    .content.right .text-content {
+        order: -1;
+    }
+
+    
+
+    .container {
+        padding: 0 23px;
     }
 
 }
