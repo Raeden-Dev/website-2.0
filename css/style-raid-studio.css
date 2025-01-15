@@ -607,7 +607,7 @@ select,
     }
 
     .studio-description {
-        flex: 4;
+        flex: 5;
         width: 100%;
         color: #fff;
     }
