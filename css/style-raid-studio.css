@@ -141,10 +141,16 @@ nav {
     }
   }
 
+  @media screen and (min-height: 991px) {
+    nav {
+        margin-bottom: 120px;
+    }
+  }
+
 
 @media screen and (min-height: 1300px) {
     nav {
-        margin-bottom: 170px;
+        margin-bottom: 210px;
     }
   }
   @media screen and (min-height: 2000px) {
