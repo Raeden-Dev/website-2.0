@@ -119,7 +119,7 @@ body {
     left: 0;
     top: 0;
     overflow-y: auto;
-    z-index: 2000;
+    z-index: 1000;
 }
 
 .sidebar-content {
@@ -177,10 +177,6 @@ nav {
 }
 
 @media screen and (max-height: 990px) {
-
-    .social-icons {
-        top: 30px;
-    }
     nav {
         margin-bottom: 200px;
     }
