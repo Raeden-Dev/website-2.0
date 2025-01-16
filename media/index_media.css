@@ -290,67 +290,36 @@
 
     /* Experience */
 
-    .experience-section {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    .experience-section h2 {
-        margin-left: 20px;
-    }
-
-    .timeline::after {
-        display: none;
-    }
-
     .timeline {
-        padding: 0 20px;
+        padding-left: 22px;
+        padding-right: 22px;
     }
 
     .content {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        padding: 20px 0px;
+        padding: 20px 8px;
     }
-
-    .timeline-item.left,
-  .timeline-item.right {
-    transform: none !important;
-  }
-
 
     .text-content {
         width: 100%;
         margin-top: 20px;
         text-align: center;
         text-align: justify;
-        padding: 0 10px;
     }
     .text-content h3 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .timeline-item.right .content {
-        flex-direction: row;
+        flex-direction: column-reverse;
     }
 
     .content img {
         width: 100%;
         max-width: 300px;
         height: auto;
-        padding: 0 10px;
     }
-
-    .timeline-item {
-        width: 100% !important;
-        margin: 20px auto !important;
-        float: none !important;
-        left: 0 !important;
-        right: 0 !important;
-      }
-      .timeline::after {
-        display: none;
-      }
 
     .timeline-item.right .text-content {
         text-align: justify;
@@ -374,27 +343,16 @@
     }
 
     .content p {
-        font-size: 17px;
+        font-size: 15px;
     }
     
-    .timeline-item.left::before,
-    .timeline-item.right::before {
-    left: 50% !important;
-    top: 93% !important;
-    bottom: -40px !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .timeline-item:last-child::before {
-    display: none !important;
-  }
-
-  .timeline-item.left::before,
-  .timeline-item.right::before {
-    border: 10px solid transparent !important;
-    border-top-color: #055ACD !important; /* Or whatever color you're using */
-    bottom: -20px !important;
-  }
+    .left::before {
+        display: none;
+    }
+    
+    .right::before {
+        display: none;
+    }
     
     .content.right .text-content {
         order: -1;
