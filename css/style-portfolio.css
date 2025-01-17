@@ -297,7 +297,6 @@ nav ul li a img {
     box-sizing: border-box;
     background-color: #090C1A;
     margin-left: 240px;
-    padding-bottom: 65px;
 }
 
 .main-content h1 {
@@ -527,7 +526,7 @@ nav ul li a img {
   position: relative;
   padding: 100px;
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 70px;
   z-index: 1001; 
   background-color: #090C1A;
 }
@@ -836,4 +835,14 @@ select,
 .portfolio-item img
 {
   cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
+}
+
+
+/*Last Updated*/
+
+.last-updated {
+  text-align: center;
+  padding: 10px 0;
+  color: #666;
+  font-size: 1rem;
 }

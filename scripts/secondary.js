@@ -351,3 +351,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update slider on window resize
     window.addEventListener('resize', updateSlider);
 });
+
+
+// Mobile Portfolio Swipe Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sliderWrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    sliderWrapper.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+    });
+
+    sliderWrapper.addEventListener('touchend', () => {
+        const swipeThreshold = 50; // Minimum swipe distance
+        const swipeDistance = touchStartX - touchEndX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe left - show next image
+                document.querySelector('.next-btn').click();
+            } else {
+                // Swipe right - show previous image
+                document.querySelector('.prev-btn').click();
+            }
+        }
+    });
+});

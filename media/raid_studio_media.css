@@ -155,8 +155,8 @@
         text-align: justify;
     }
 
-    .studio-logo {
-        display: none;
+    .studio-intro {
+        
     }
 
     .studio-intro {
@@ -209,5 +209,12 @@
         z-index: 990;
     }
 
+    .studio-intro {
+        flex-direction: column-reverse;
+    }
+
+    .studio-description p {
+          margin-bottom: 0px;
+      }
 
 }
