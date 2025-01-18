@@ -352,6 +352,20 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateSlider);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
+    const images = sliderWrapper.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Start auto-sliding every 3 seconds
+    setInterval(autoSlide, 3500);
+});
+
 
 // Mobile Portfolio Swipe Functionality
 document.addEventListener('DOMContentLoaded', () => {

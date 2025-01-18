@@ -245,7 +245,7 @@ nav ul li a img {
 
 .social-icons {
   position: relative;
-  top: -30px;
+  top: -40px;
 }
 
 .social-icons img {
@@ -276,6 +276,16 @@ nav ul li a img {
   transform: scale(1.08);
 }
 
+/* Website Status */
+
+.website-status {
+  font-size: 1em;
+  text-align: center;
+  color: #F32013;
+  flex-shrink: 0;
+  margin-top: -60px;
+  margin-bottom: 11px;
+}
 
 /* Copyright */
 
@@ -284,9 +294,11 @@ nav ul li a img {
   text-align: center;
   color: #fff;
   flex-shrink: 0;
-  margin-top: -30px;
-  padding-bottom: 15px;
+  margin-top: -35px;
+  margin-bottom: 15px;
 }
+
+
 
 /* Main Contents */
 
@@ -843,6 +855,12 @@ select,
 .last-updated {
   text-align: center;
   padding: 10px 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.end-section {
+  text-align: center;
   color: #666;
   font-size: 1rem;
 }
