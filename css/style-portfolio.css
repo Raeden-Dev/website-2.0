@@ -538,7 +538,7 @@ nav ul li a img {
   position: relative;
   padding: 100px;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 33px;
   z-index: 1001; 
   background-color: #090C1A;
 }
@@ -615,6 +615,23 @@ nav ul li a img {
   grid-column: span 1;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  position: relative;
+}
+
+.peek-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  font-size: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-item:hover .peek-icon {
+  opacity: 1;
 }
 
 .portfolio-item:nth-child(1) {
@@ -854,7 +871,8 @@ select,
 
 .last-updated {
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
+  padding-top: 2px;
   color: #666;
   font-size: 1rem;
 }
@@ -862,5 +880,6 @@ select,
 .end-section {
   text-align: center;
   color: #666;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  line-height: 0;
 }

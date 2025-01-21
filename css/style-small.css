@@ -1000,10 +1000,11 @@ button:hover {
 
 .last-updated {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    padding-top: 2px;
     color: #666;
     font-size: 1rem;
-}
+  }
 
 /* Cursor */
 
