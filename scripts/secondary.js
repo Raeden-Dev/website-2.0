@@ -396,3 +396,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Desktop Portfolio Slider
+document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('mainPreviewImage');
+    const thumbsTrack = document.querySelector('.thumbnails-track');
+    const thumbs = document.querySelectorAll('.thumb');
+    const prevBtn = document.querySelector('.thumb-nav-btn.prev');
+    const nextBtn = document.querySelector('.thumb-nav-btn.next');
+    
+    let currentIndex = 0;
+    const thumbsPerView = 6;
+    
+    // Update main image when clicking thumbnails
+    thumbs.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+            thumbs.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+            currentIndex = Math.floor(index / thumbsPerView) * thumbsPerView;
+            updateThumbnailsPosition();
+        });
+    });
+    
+    // Navigation buttons
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex -= thumbsPerView;
+            updateThumbnailsPosition();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex + thumbsPerView < thumbs.length) {
+            currentIndex += thumbsPerView;
+            updateThumbnailsPosition();
+        }
+    });
+    
+    function updateThumbnailsPosition() {
+        const translateX = -currentIndex * (thumbs[0].offsetWidth + 10);
+        thumbsTrack.style.transform = `translateX(${translateX}px)`;
+    }
+});

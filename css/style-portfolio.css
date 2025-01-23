@@ -323,12 +323,9 @@ nav ul li a img {
     color: #333;
     font-size: 36px;
     margin-top: -20px;
-    margin-bottom: -13px;
+    margin-bottom: -21px;
   }
 
-  .mobile-title {
-    display: none;
-  }
 
 .section {
     background-color: var(--color-primary);
@@ -615,23 +612,6 @@ nav ul li a img {
   grid-column: span 1;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  position: relative;
-}
-
-.peek-icon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  color: white;
-  font-size: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.portfolio-item:hover .peek-icon {
-  opacity: 1;
 }
 
 .portfolio-item:nth-child(1) {
@@ -882,4 +862,93 @@ select,
   color: #666;
   font-size: 1.3rem;
   line-height: 0;
+}
+
+
+/*Desktop Preview*/
+  .desktop-preview {
+      width: calc(100% - 200px); /* Accounts for 100px padding on each side */
+      margin: 0 auto;
+      padding: 0px 100px;
+  }
+    .main-image-container {
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .main-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: left; /* Aligns image to the left */
+    }
+.thumbnails-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+  .thumbnails-wrapper {
+      width: calc(100% - 80px);
+      overflow: hidden;
+      flex: 1;
+      min-width: 0; /* Prevents Firefox flex issues */
+  }
+
+  .thumbnails-track {
+      display: flex;
+      transition: transform 0.3s ease;
+      gap: 10px;
+      width: 100%; /* Ensures proper width calculation in Firefox */
+      flex-shrink: 0;
+  }
+
+  .thumb {
+      width: calc((100% - 50px) / 6);
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      flex-shrink: 0; /* Prevents thumbnail shrinking in Firefox */
+  }
+
+  @media screen and (min-width: 1800px) {
+    .thumb {
+      height: 120px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .thumb {
+    height: 170px;
+}
+}
+
+@media screen and (min-width: 3700px) {
+  .thumb {
+    height: 280px;
+}
+}
+
+.thumb.active {
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+.mobile-title {
+  display: none;
+}
+
+.thumb-nav-btn {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 20px;
 }
