@@ -155,9 +155,6 @@
         text-align: justify;
     }
 
-    .studio-intro {
-        
-    }
 
     .studio-intro {
         padding: 0 25px;
@@ -210,16 +207,16 @@
     }
 
     .studio-intro {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .studio-description p {
-          margin-bottom: 0px;
+          margin-bottom: 35px;
     }
 
     .studio-logo {
-        margin-top: -30px;
-        margin-bottom: 25px;
+        margin-bottom: -50px;
+        margin-top: 30px;
     }
 }
 

@@ -408,6 +408,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     const thumbsPerView = 6;
     
+    // Add this CSS class for disabled state
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+        .thumb-nav-btn.disabled {
+            background: rgba(128, 128, 128, 0.5) !important;
+            cursor: default;
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+    function updateButtonStates() {
+        // Check and update prev button
+        if (currentIndex <= 0) {
+            prevBtn.classList.add('disabled');
+        } else {
+            prevBtn.classList.remove('disabled');
+        }
+
+        // Check and update next button
+        if (currentIndex + thumbsPerView >= thumbs.length) {
+            nextBtn.classList.add('disabled');
+        } else {
+            nextBtn.classList.remove('disabled');
+        }
+    }
+
+    // Initial button states
+    updateButtonStates();
+    
     // Update main image when clicking thumbnails
     thumbs.forEach((thumb, index) => {
         thumb.addEventListener('click', () => {
@@ -416,6 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb.classList.add('active');
             currentIndex = Math.floor(index / thumbsPerView) * thumbsPerView;
             updateThumbnailsPosition();
+            updateButtonStates();
         });
     });
     
@@ -424,6 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex > 0) {
             currentIndex -= thumbsPerView;
             updateThumbnailsPosition();
+            updateButtonStates();
         }
     });
     
@@ -431,6 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex + thumbsPerView < thumbs.length) {
             currentIndex += thumbsPerView;
             updateThumbnailsPosition();
+            updateButtonStates();
         }
     });
     

@@ -841,7 +841,10 @@ select,
 .page-nav button,
 .carousel-thumbnails img,
 .thumbnail-image,
-.portfolio-item img
+.thumbnails-container .thumb-nav-btn,
+.thumbnails-track img,
+.portfolio-item img,
+.thumbnails-container
 {
   cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
 }
@@ -885,13 +888,11 @@ select,
         object-position: left; /* Aligns image to the left */
     }
 .thumbnails-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     position: relative;
+    width: 100%;
 }
   .thumbnails-wrapper {
-      width: calc(100% - 80px);
+      width: 100%;
       overflow: hidden;
       flex: 1;
       min-width: 0; /* Prevents Firefox flex issues */
@@ -943,12 +944,28 @@ select,
 }
 
 .thumb-nav-btn {
-    width: 35px;
-    height: 35px;
-    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    width: 40px;
+    height: 40px;
     border: none;
-    color: #000;
+    color: #fff;
     cursor: pointer;
-    z-index: 2;
-    font-size: 20px;
+    font-size: 17px;
+}
+
+.thumb-nav-btn.prev {
+    left: 10px;
+}
+
+.thumb-nav-btn.next {
+    right: 10px;
+}
+
+.thumb-nav-btn.disabled {
+    background: rgba(128, 128, 128, 0.5) !important;
+    pointer-events: none;
 }
