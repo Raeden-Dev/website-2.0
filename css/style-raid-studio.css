@@ -492,6 +492,10 @@
 
 /* Discord */
 
+.discord-text:nth-of-type(2) {
+  display: none;
+}
+
 .discord-button {
     position: fixed; 
     bottom: 20px;
@@ -507,11 +511,6 @@
 
 .discord-button:hover {
     transform: scale(1.02);
-}
-
-.discord-button img {
-    width: 24px;
-    height: 24px;
 }
 
 

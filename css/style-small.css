@@ -437,6 +437,21 @@ section img#bg_front_a {
     font-family: "Handjet", system-ui;
 }
 
+.peek-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .portfolio-item:hover .peek-icon {
+    opacity: 1;
+  }
 
 .category-buttons {
     text-align: center;
@@ -520,6 +535,7 @@ section img#bg_front_a {
     grid-column: span 1;
     aspect-ratio: 1 / 1;
     overflow: hidden;
+    position: relative;
 }
 
 .portfolio-item:nth-child(1) {

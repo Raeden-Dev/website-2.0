@@ -202,7 +202,7 @@
         z-index: 1;
     }
     .discord-button {
-        padding: 0 5px;
+        padding: 0 0px;
         z-index: 990;
     }
 
@@ -218,5 +218,39 @@
         margin-bottom: -50px;
         margin-top: 30px;
     }
+
+    .discord-text:nth-of-type(1) {
+        display: none;
+      }
+
+      .discord-text:nth-of-type(2) {
+        display: block;
+      }
+      .discord-text img {
+        width: 60px;
+        width: 60px;
+    }
+
+    .discord-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    .discord-button {
+        position: fixed; 
+        bottom: 20px;
+        right: 20px;
+        background: #fff;
+        padding: 0px 0px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 999;
+        margin: 0;
+        border: none;
+        line-height: 0;
+    }
+
+
+
 }
 
