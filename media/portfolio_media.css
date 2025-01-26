@@ -113,7 +113,41 @@
     }
 
     .discord-button {
-        padding: 0 10px;
+        padding: 0 0px;
+        z-index: 990;
+    }
+
+    .discord-text:nth-of-type(1) {
+        display: none;
+      }
+
+      .discord-text:nth-of-type(2) {
+        display: block;
+      }
+      .discord-text img {
+        width: 40px;
+        width: 40px;
+    }
+
+    .discord-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    .discord-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 999;
+        margin: 0;
+        border: none;
+        line-height: 0;
     }
 
     /* Portfolio section */
@@ -319,6 +353,10 @@
         width: 100%;
         flex-wrap: nowrap;
         object-fit: contain;
+      }
+
+      .end-section {
+        font-size: 1.1rem;
       }
 
 }

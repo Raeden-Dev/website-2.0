@@ -203,7 +203,6 @@
     }
     .discord-button {
         padding: 0 0px;
-        z-index: 990;
     }
 
     .studio-intro {
@@ -227,8 +226,8 @@
         display: block;
       }
       .discord-text img {
-        width: 60px;
-        width: 60px;
+        width: 40px;
+        width: 40px;
     }
 
     .discord-text {
@@ -237,11 +236,13 @@
     }
 
     .discord-button {
-        position: fixed; 
-        bottom: 20px;
+        position: fixed;
+        top: 20px;
         right: 20px;
-        background: #fff;
-        padding: 0px 0px;
+        background: transparent;
+        padding: 0;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
         transition: all 0.3s ease;
         z-index: 999;

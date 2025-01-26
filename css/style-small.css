@@ -527,30 +527,15 @@ section img#bg_front_a {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5px;
 }
 
 .portfolio-item {
     grid-column: span 1;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     position: relative;
-}
-
-.portfolio-item:nth-child(1) {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1;
-}
-
-.portfolio-item:nth-child(5) {
-  grid-column: span 2;
-  aspect-ratio: 2 / 1;
-}
-
-.portfolio-item:nth-child(9) {
-  grid-column: span 2;
-  aspect-ratio: 2 / 1;
 }
 
 .portfolio-item img {
@@ -603,24 +588,6 @@ section img#bg_front_a {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-.portfolio-item.development {
-    grid-column: span 1;
-    aspect-ratio: 1 / 1;
-}
-
-.portfolio-item.development:nth-child(3n-2) {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1;
-}
-
-.portfolio-item.development:nth-child(4) {
-    grid-column: span 1;
-}
-
-.portfolio-item.development:nth-child(5) {
-    grid-column: span 2;
 }
 
 .portfolio-item.development:nth-child(6) {
@@ -942,53 +909,52 @@ button:hover {
 
 /* Discord */
 
-.discord-button {
-    position: fixed; 
-    bottom: 20px;
-    right: 20px;
-    background: #fff;
-    padding: 0 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    margin: 0;
-    border: #000 4px solid;
-}
-
-.discord-button:hover {
-    transform: scale(1.02);
-}
-
-.discord-button img {
-    width: 24px;
-    height: 24px;
-}
-
-
-.discord-tooltip {
-    position: absolute;
-    background: #1a1a1a;
-    color: white;
-    padding: 8px 12px;
-    font-size: 14px;
-    right: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-right: 10px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.discord-button:hover .discord-tooltip {
-    opacity: 1;
-}
-
-.discord-text {
-    color: #000;
-    font-weight: bold;
-}
+.discord-text:nth-of-type(2) {
+    display: none;
+  }
+  
+  .discord-button {
+      position: fixed; 
+      bottom: 20px;
+      right: 20px;
+      background: #fff;
+      padding: 0 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 999;
+      margin: 0;
+      border: #000 4px solid;
+  }
+  
+  .discord-button:hover {
+      transform: scale(1.02);
+  }
+  
+  
+  .discord-tooltip {
+      position: absolute;
+      background: #1a1a1a;
+      color: white;
+      padding: 8px 12px;
+      font-size: 14px;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+  }
+  
+  .discord-button:hover .discord-tooltip {
+      opacity: 1;
+  }
+  
+  .discord-text {
+      color: #000;
+      font-weight: bold;
+  }
 
 
 /*Hamburger Menu*/

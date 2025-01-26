@@ -471,3 +471,14 @@ document.addEventListener('DOMContentLoaded', () => {
         thumbsTrack.style.transform = `translateX(${translateX}px)`;
     }
 });
+
+
+// Scroll to Portfolio Section
+document.addEventListener('DOMContentLoaded', () => {
+    const endSection = document.querySelector('.end-section');
+    
+    endSection.addEventListener('click', () => {
+        const portfolioSection = document.querySelector('.portfolio');
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
