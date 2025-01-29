@@ -597,7 +597,8 @@ select,
 .thumbnails-track img,
 .portfolio-item img,
 .thumbnails-container,
-.end-section p
+.end-section p,
+.end-section
 {
   cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
 }
@@ -623,7 +624,7 @@ select,
 
   .end-section:hover {
     letter-spacing: 0.2px;
-    
+    color: #4e08be;
 }
 
 

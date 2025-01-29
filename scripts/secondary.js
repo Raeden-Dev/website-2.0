@@ -473,12 +473,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Scroll to Portfolio Section
 document.addEventListener('DOMContentLoaded', () => {
+    // Add click handler for end-section
     const endSection = document.querySelector('.end-section');
-    
     endSection.addEventListener('click', () => {
-        const portfolioSection = document.querySelector('.portfolio');
-        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to portfolio section
+        document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+        
+        // After scrolling completes, animate portfolio items
+        setTimeout(() => {
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            portfolioItems.forEach(item => {
+                item.style.transition = 'transform 0.3s ease-in-out';
+                item.style.transform = 'scale(1.02)';
+                
+                // Return to normal size after 0.5s
+                setTimeout(() => {
+                    item.style.transform = 'scale(1)';
+                }, 500);
+            });
+        }, 1000); // Wait for scroll to complete
     });
 });

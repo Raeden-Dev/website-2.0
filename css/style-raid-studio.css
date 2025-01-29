@@ -622,6 +622,24 @@ select,
         color: #fff;
     }
 
+    @media screen and (min-width: 3700px) {
+      .studio-description {
+        flex: 20;
+    }
+    .studio-description p {
+      font-size: 27px;
+    }
+    }
+
+    @media screen and (min-width: 2400px) {
+      .studio-description {
+        flex: 12;
+    }
+    .studio-description p {
+      font-size: 23px;
+    }
+    }
+
   .studio-description p {
     font-size: 20px;
       margin-bottom: 15px;
