@@ -182,26 +182,10 @@ function openPopup(projectId) {
             images: [
                 "assets/gallery/mob_full.png",
                 "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/mob_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png",
-                "assets/gallery/swords_full.png"
-            ]
+                "assets/gallery/mob_full.png"
+            ],
+            description: "Detailed description of project 2"
+
         },
         project3: {
             title: "Project 3",
