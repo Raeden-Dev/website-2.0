@@ -565,7 +565,7 @@ nav ul li a img {
 /* Cursor */
 
 * {
-  cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+  cursor: url('../assets/cursor/cursor_normal.png') 4 4, auto;
 }
 
 /* Interactive elements cursor */
@@ -600,7 +600,7 @@ select,
 .end-section p,
 .end-section
 {
-  cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
+  cursor: url('../assets/cursor/cursor_interact.png') 4 4, pointer;
 }
 
 
