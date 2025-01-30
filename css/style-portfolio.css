@@ -488,7 +488,7 @@ nav ul li a img {
   
 
   .category-link:hover {
-      letter-spacing: 0.2px;
+      letter-spacing: 0.4px;
   }
 
 
@@ -565,7 +565,7 @@ nav ul li a img {
 /* Cursor */
 
 * {
-  cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+  cursor: url('../assets/cursor/cursor_normal.png') 0 0, auto;
 }
 
 /* Interactive elements cursor */
@@ -597,10 +597,10 @@ select,
 .thumbnails-track img,
 .portfolio-item img,
 .thumbnails-container,
-.end-section p,
+.end-section p, 
 .end-section
 {
-  cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
+  cursor: url('../assets/cursor/cursor_interact.png') 0 0, pointer;
 }
 
 
@@ -746,4 +746,22 @@ select,
 
 .portfolio-item:hover .peek-icon {
   opacity: 1;
+}
+
+/* Category Buttons */
+
+.category-buttons.glow {
+    animation: glowEffect 1s infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 5px #4e08be;
+    }
+    50% {
+        box-shadow: 0 0 15px #4e08be, 0 0 25px #4e08be;
+    }
+    100% {
+        box-shadow: 0 0 5px #4e08be;
+    }
 }

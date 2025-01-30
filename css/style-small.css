@@ -991,7 +991,7 @@ button:hover {
 /* Cursor */
 
 * {
-    cursor: url('../assets/cursor/cursor_normal.png') 16 16, auto;
+    cursor: url('../assets/cursor/cursor_normal.png') 0 0, auto;
 }
 
 /* Interactive elements cursor */
@@ -1020,5 +1020,21 @@ select,
 .popup-content::-webkit-scrollbar-thumb,
 .popup-content::-webkit-scrollbar-track
 {
-    cursor: url('../assets/cursor/cursor_interact.png') 16 16, pointer;
+    cursor: url('../assets/cursor/cursor_interact.png') 0 0, pointer;
+}
+
+.category-buttons.glow {
+    animation: glowEffect 2s infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 5px #4e08be;
+    }
+    50% {
+        box-shadow: 0 0 20px #4e08be, 0 0 30px #4e08be;
+    }
+    100% {
+        box-shadow: 0 0 5px #4e08be;
+    }
 }

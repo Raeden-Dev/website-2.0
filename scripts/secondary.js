@@ -477,5 +477,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 500);
             });
         }, 1000); // Wait for scroll to complete
+        
+        setTimeout(() => {
+            const categoryButtons = document.querySelector('.category-buttons');
+            categoryButtons.classList.add('glow');
+            
+            // Remove glow after one animation cycle
+            setTimeout(() => {
+                categoryButtons.classList.remove('glow');
+            }, 1000); // Matches the animation duration
+        }, 1000);
     });
 });
