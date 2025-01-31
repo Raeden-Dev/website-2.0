@@ -562,7 +562,7 @@
 /* Cursor */
 
 * {
-    cursor: url('../assets/cursor/cursor_normal.png') 0 0, auto;
+    cursor: url('../assets/cursor/cursor_normal.png') 4 4, auto;
 }
 
 /* Interactive elements cursor */
@@ -593,7 +593,7 @@ select,
 .page-nav button,
 .logo img
 {
-    cursor: url('../assets/cursor/cursor_interact.png') 0 0, pointer;
+    cursor: url('../assets/cursor/cursor_interact.png') 4 4, pointer;
 }
 
 

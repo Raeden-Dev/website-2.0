@@ -991,7 +991,7 @@ button:hover {
 /* Cursor */
 
 * {
-    cursor: url('../assets/cursor/cursor_normal.png') 0 0, auto;
+    cursor: url('../assets/cursor/cursor_normal.png') 4 4, auto;
 }
 
 /* Interactive elements cursor */
@@ -1020,7 +1020,7 @@ select,
 .popup-content::-webkit-scrollbar-thumb,
 .popup-content::-webkit-scrollbar-track
 {
-    cursor: url('../assets/cursor/cursor_interact.png') 0 0, pointer;
+    cursor: url('../assets/cursor/cursor_interact.png') 4 4, pointer;
 }
 
 .category-buttons.glow {
