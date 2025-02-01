@@ -463,15 +463,18 @@ document.addEventListener('DOMContentLoaded', () => {
     endSection.addEventListener('click', () => {
         // Scroll to portfolio section
         document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
-        
+
         setTimeout(() => {
             const categoryButtons = document.querySelector('.category-buttons');
-            categoryButtons.classList.add('glow');
+            categoryButtons.classList.add('glow', 'spread-text');
             
-            // Remove glow after one animation cycle
+            setTimeout(() => {
+                categoryButtons.classList.remove('spread-text');
+            }, 500); // Slightly shorter than glow
+    
             setTimeout(() => {
                 categoryButtons.classList.remove('glow');
-            }, 1000); // Matches the animation duration
-        }, 1000);
+            }, 1000);
+        }, 500);
     });
 });

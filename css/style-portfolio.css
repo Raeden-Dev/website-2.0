@@ -491,6 +491,11 @@ nav ul li a img {
       letter-spacing: 0.4px;
   }
 
+  .category-buttons.spread-text {
+    letter-spacing: 0.4px;
+    transition: letter-spacing 0.2s ease;
+}
+
 
 /* Discord */
 
@@ -765,3 +770,5 @@ select,
         box-shadow: 0 0 3px #672bc9;
     }
 }
+
+
