@@ -756,12 +756,12 @@ select,
 
 @keyframes glowEffect {
     0% {
-        box-shadow: 0 0 5px #4e08be;
+        box-shadow: 0 0 3px #672bc9;
     }
     50% {
-        box-shadow: 0 0 15px #4e08be, 0 0 25px #4e08be;
+        box-shadow: 0 0 8px #a073e7, 0 0 13px #fdfcff;
     }
     100% {
-        box-shadow: 0 0 5px #4e08be;
+        box-shadow: 0 0 3px #672bc9;
     }
 }
