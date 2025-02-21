@@ -663,7 +663,7 @@ section img#bg_front_a {
 
 .bar-container {
     width: 100%;
-    background-color: #1A1F35;
+    background-color: var(--primary-side);
     height: 20px;
     overflow: hidden;
     position: relative;
