@@ -1,7 +1,9 @@
 
 :root {
-  --primary-side: #1c1e1f;
+  --primary-side: #0b132b;
   --primary-colored: #4e08be;
+  --primary-bg: #050512;
+  --nav-hovered: #121e42;
   --menu-btn-color: #fff;
   --default-bg-color: #4e08be;
   
@@ -13,7 +15,7 @@ body {
   padding: 0;
   font-family: 'Geo', sans-serif;
   overflow-x: hidden;
-  background-color: #090C1A;
+  background-color: var(--primary-bg);
 }
 
 
@@ -71,7 +73,7 @@ body {
 .sidebar {
   width: 200px;
   height: 100vh;
-  background-color: #1c1e1f;
+  background-color: var(--primary-side);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -173,7 +175,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: #292b2c; 
+  background-color: var(--nav-hovered); 
 }
 
 nav ul li a {
@@ -308,7 +310,7 @@ nav ul li a img {
     position: relative;
     z-index: 1;
     box-sizing: border-box;
-    background-color: #090C1A;
+    background-color: var(--primary-bg);
     margin-left: 240px;
 }
 
@@ -336,7 +338,7 @@ nav ul li a img {
   padding-top: 70px;
   padding-bottom: 33px;
   z-index: 1001; 
-  background-color: #090C1A;
+  background-color: var(--primary-bg);
 }
 
 .portfolio-header {
