@@ -1,0 +1,256 @@
+@media screen and (min-height: 800px) {
+    .sidebar {
+        padding-top: 30px;
+    }
+    nav {
+        width: 100%;
+        margin-top: -180px;
+    }
+    .social-icons {
+        position: relative;
+        top: -90px;
+    }
+}
+
+
+@media screen and (min-height: 1000px) {
+    nav {
+        width: 100%;
+        margin-top: -530px;
+    }
+    nav ul li a {
+        font-size: 1.7em;
+    }
+    .social-icons {
+        position: relative;
+        top: -110px;
+    }
+    .copyright {
+        padding-bottom: 35px;
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    .sidebar {
+        padding-top: 35px;
+    }
+    nav {
+        width: 100%;
+        margin-top: -550px;
+    }
+    .copyright {
+        padding-bottom: 45px;
+    }
+}
+
+@media screen and (min-height: 1300px) {
+    nav {
+        width: 100%;
+        margin-top: -650px;
+    }
+
+}
+
+@media screen and (min-height: 1400px) {
+    nav {
+        width: 100%;
+        margin-top: -750px;
+    } 
+
+}
+
+@media screen and (min-width: 1800px) {
+    .project-card img {
+        height: 320px;
+    }
+  }
+
+@media screen and (min-width: 2400px) {
+    .project-card img {
+        height: 460px;
+    }
+  }
+  @media screen and (min-width: 3700px) {
+    .project-card img {
+        height: 730px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        max-width: 96%;
+        transition: opacity 0.3s ease-in-out;
+        height: auto;
+        margin-top: 30px;
+    }
+    .logo-container::after {
+        width: 96%;
+        margin-top: 30px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 196px;
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Hamburger animation classes */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .page-title {
+        font-size: 45px;
+        margin: 1.7rem 0;
+        text-align: center;
+    }
+
+    .raid-studio {
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .studio-description {
+        padding: 0;
+    }
+
+    .studio-description h2 {
+        margin-bottom: 20px;
+        font-family: 'Handjet', sans-serif;
+        font-size: 30px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .studio-description p {
+        text-align: justify;
+    }
+
+
+    .studio-intro {
+        padding: 0 25px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;  /* Single column for mobile */
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .project-card img {
+        height: 200px;  /* Smaller height for mobile */
+    }
+
+    .popup-content {
+        width: 90%;
+        margin: 55px auto;
+        padding: 10px;
+    }
+
+    .popup-gallery {
+        grid-template-columns: 1fr;  /* Single column gallery */
+    }
+
+    .project-description h3 {
+        font-size: 1.2rem;
+    }
+    
+    .close-btn {
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        color: white;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    .discord-button {
+        padding: 0 0px;
+    }
+
+    .studio-intro {
+        flex-direction: column;
+    }
+
+    .studio-description p {
+          margin-bottom: 35px;
+    }
+
+    .studio-logo {
+        margin-bottom: -50px;
+        margin-top: 30px;
+    }
+
+    .discord-text:nth-of-type(1) {
+        display: none;
+      }
+
+      .discord-text:nth-of-type(2) {
+        display: block;
+      }
+      .discord-text img {
+        width: 40px;
+        width: 40px;
+    }
+
+    .discord-text {
+        padding: 0;
+        margin: 0;
+    }
+
+    .discord-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 999;
+        margin: 0;
+        border: none;
+        line-height: 0;
+    }
+
+
+
+}
+
